@@ -1,0 +1,361 @@
+* {
+	box-sizing: border-box;
+}
+
+
+/**to not allow the events on right-click**/
+img {
+    pointer-events: none;
+}
+
+/**back to top button**/
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 60px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #343a40; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 5px 5px 5px #222;
+  border-radius: 60%;
+ }
+ #topBtn:hover {
+ 	color: lightgray;
+ 	box-shadow: 10px 10px 10px #222;
+ }
+ 
+body {
+	background-color: rgb(68, 172, 195, 0.3);
+}
+
+
+/*******NAVBAR********/
+ h1{
+ 	color: #117182;
+ 	text-shadow: 10px 10px 10px #222; 
+ 	font-size: 1.3em;
+ 	font-family: 'Anton', sans-serif;
+ 	margin-top: 10px;
+ }
+
+.navbar-dark .navbar-nav .nav-link {
+	color: white;
+	text-align: center;
+}
+
+/***Resume download button****/
+.resume {
+  background-color: #117182;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 10px 10px 10px #222; 
+}
+
+.resume:hover {
+  opacity: 0.9;
+}
+#download {
+	color: white; 
+}
+#download:hover {
+	text-decoration: none;
+}/**download button end**/
+
+/*****ABOUT******/
+#name {
+	color: white;
+	text-shadow: 10px 10px 10px #222;
+	text-align: center;
+	font-family: 'Fjalla One', sans-serif;
+	font-weight: bold;
+}
+#iam{
+	font-family: 'Cinzel', serif;
+	color: white;
+} 
+#cs {
+	color: white;
+	font-family: 'Dancing Script', cursive;
+}
+#intro{
+	background-image:  url("../../images/background-1.jpg");
+	background-size: cover;		
+	background-color: #cccccc; 
+	background-attachment: fixed;
+	background-position: center center;
+}
+#about {
+	font-family: 'Cairo', sans-serif;
+	background-color: rgb(52, 58, 64);
+	color: white;
+	padding: 20px;
+}
+#about > h3 {
+	color: rgb(68, 172, 195);
+	text-align: center;
+}
+#about > h4 {
+	font-family: 'Dancing Script', cursive;
+	color: white;
+	text-shadow: 2px 2px 2px #222;
+}
+#profile {
+	border-radius: 50%;
+	border: 2px solid #343a40;
+	box-shadow: 5px 5px 5px #222;
+	text-align: center;
+}/**about end**/
+
+
+/*******CONTENT*******/
+/*Education, Skills etc..*/
+
+ h3{
+ 	color: #45595c;
+ 	text-align: left;
+ 	font-weight: bold;
+ 	line-height: 2em;
+ 	font-family: 'Cinzel', serif;
+ 	font-size: 2.2em;
+ }
+
+ .content {
+ 	margin: 20px;
+ 	background-color: white;
+ 	box-shadow: 5px 5px 5px #222;
+ 	font-family: 'Cairo', sans-serif;
+ 	display:block;
+ 	padding: 10px 50px 10px 50px;
+ }
+/*About section*/
+#Me {
+ 	font-style: italic;
+} 
+/**Education box**/
+ #education span {
+ 	font-style: italic;
+ 	color: darkblue;
+ }
+ #education h4 {
+ 	font-size: 1.3em;
+ 	padding-left: -30px;
+ }
+ #score {
+ 	color: green;
+ }/**end of education**/
+
+ /**Skills Box**/
+ #skills h4, h5{
+ 	margin: 10px;
+ 	color: #117182;
+}
+#skills ul {
+	list-style-type: none;
+}
+
+#skills li::before {
+   	content: "\00BB";
+   	padding-right: 5px;
+   	color: #117182;
+}
+#skills p {
+	margin-left: 30px;
+}/**end of skills**/
+
+/**certificates box**/
+#certificates {
+	margin: 10px;
+	padding: 10px;
+}
+#certificates>h3 {
+	text-align: left;
+}
+#certificates, a:link, a:visited {
+	color: black;
+	text-decoration: none;
+}
+#cerificates , a:hover, a:active {
+	color: blue;
+	text-decoration: underline;
+	opacity: 0.7;
+}/**end of certificates**/
+/**end of CONTENT**/
+
+/******FOOTER******/
+.page-footer{
+	background-color: #343a40;
+	color: white;
+}
+
+/**github and linked-in logo**/
+#social {
+	text-decoration: none;
+	color: white;
+	margin: 5px;
+}
+#social: hover {
+	opacity: 0.7;
+  	color: gray;
+}
+/**end of footer**/
+
+
+/****MEDIA QUERIES*****/
+
+/**laptop view**/
+@media (min-width: 992px) {
+	#name {
+		position: relative;
+		font-size: 5em;
+		top: 120px;
+		left: 100px;
+		width: 60vw;
+		float: right;
+		margin: auto;
+	}
+	#iam{
+		position: relative;
+		font-size: 2em;
+		top: 70px;
+		right: 310px;
+		float: right;
+	}
+	#cs{
+		position: relative;
+		font-size: 1.5em;
+		top: 130px;
+		right: 270px;
+		float: right;
+	}
+
+	#about {
+	 	width: 25vw;
+	 	top: 0;
+	 	left: 0;
+	}
+	#skills .column {
+ 		width: 50%;
+ 	}
+ 	#education .column {
+ 		width: 30%;
+ 	} 
+ 	#certificates{
+ 		width: 45%;
+ 	}
+}
+
+/**tab view**/
+@media (min-width: 768px) and (max-width: 991px){
+	#name {
+		position: relative;
+		font-size: 5em;
+		top: 120px;
+		left: 150px;
+		width: 60vw;
+		float: right;
+		margin: auto;
+	}
+	#iam{
+		position: relative;
+		font-size: 2em;
+		top: 70px;
+		right: 200px;
+		float: right;
+	}
+	#cs{
+		position: relative;
+		font-size: 1.5em;
+		top: 130px;
+		right: 180px;
+		float: right;
+	}
+	#about {
+	 	width: 30vw;
+	 	top: 0;
+	 	left: 0;
+	}
+	#skills .column {
+ 		width: 50%;
+ 	}
+ 	#education .column {
+ 		width: 30%;
+ 		margin: 10px;
+ 		padding: 10px;
+ 	} 
+ 	#certificates{
+ 		width: 50%;
+ 		margin: auto;
+ 	}
+}
+
+/**mobile view**/
+@media (max-width: 767px) {
+
+	
+	#name {
+		font-size: 2.5em;
+		
+	}	
+	#iam{
+		font-size: 1.5em;
+		top: 50px;
+		right: 20px;
+		padding-top: 10px;
+	}
+	#cs{
+		font-size: 1em;
+		top: 80px;
+		right: 20px;
+	}
+
+	#intro{
+	  	text-align: center;
+	  	background-size: 100 100;
+	}
+
+	#about {
+	 	width: 100vw;
+	 	margin: auto;
+	 	overflow: auto;
+	 	display:block;
+	}
+	#about > h3 {
+	 	text-align: center;
+	}
+	#about > h4 {
+		font-size: 1.5em;
+	}
+ 	#education {
+ 		margin-bottom: 10px;
+ 	}
+
+ 	#skills {
+ 		padding: 15px;
+ 	}	
+ 	#skills , h4, h5 {
+ 		padding-left: 20px;
+ 	} 
+ 	.column {
+ 		width: 100%; 
+	}
+	h3 {
+		font-size: 1.6em;
+	} 
+	h4 {
+		font-size: 1.2em;
+	}
+	h5 {
+		font-size: 1em;
+	}
+
+}
+/**end of MEDIA QUERIES**/
